@@ -1,0 +1,256 @@
+:root {
+  color-scheme: dark;
+  --background: #050807;
+  --foreground: #d7ffd7;
+  --muted: #6fbf73;
+  --border: #2f8f46;
+  --accent: #39ff72;
+  --accent-dark: #b8ffbf;
+  --surface: #09110c;
+  --shadow: rgba(57, 255, 114, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(57, 255, 114, 0.08), transparent 32rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-dark);
+}
+
+button,
+a {
+  transition: background-color 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+a:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(100% - 2rem, 800px);
+  margin: 0 auto;
+  padding: 2.5rem 0;
+}
+
+.hero {
+  margin-bottom: 3rem;
+}
+
+.prompt {
+  color: var(--accent);
+  font-size: 0.875rem;
+  margin: 0 0 0.75rem;
+}
+
+.prompt::before {
+  content: "> ";
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  color: var(--accent);
+  font-size: clamp(2.2rem, 8vw, 4.4rem);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.06em;
+  text-shadow: 0 0 18px rgba(57, 255, 114, 0.2);
+}
+
+h2 {
+  display: inline-block;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.role {
+  font-weight: 700;
+  max-width: 680px;
+}
+
+.location {
+  color: var(--muted);
+}
+
+.profile-links,
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.topbar {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.profile-links a,
+.language-select {
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.75rem;
+  text-decoration: none;
+}
+
+.profile-links a::before {
+  content: "./";
+  color: var(--muted);
+}
+
+.profile-links a:hover,
+.language-select:hover,
+.language-select:focus {
+  background: var(--accent);
+  color: var(--background);
+}
+
+.content-block p:last-child {
+  margin-bottom: 0;
+}
+
+.terminal-section {
+  margin-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skill-group {
+  border-left: 1px solid var(--border);
+  padding-left: 0.85rem;
+}
+
+.skill-group h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-list li,
+.post-tags span {
+  border: 1px solid var(--border);
+  color: var(--accent-dark);
+  padding: 0.12rem 0.4rem;
+}
+
+.posts-status {
+  color: var(--muted);
+}
+
+.posts-status:empty {
+  display: none;
+}
+
+.posts-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.post-card {
+  border-top: 1px dashed var(--border);
+  padding-top: 1rem;
+}
+
+.post-card h3 {
+  font-size: 1rem;
+  margin: 0 0 0.35rem;
+}
+
+.post-meta {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-description {
+  margin-bottom: 0.65rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.65rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 1rem, 800px);
+    padding: 1rem 0 1.25rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    display: grid;
+  }
+
+  .language-select-label,
+  .language-select {
+    width: 100%;
+  }
+}
+
+.language-select-label {
+  color: var(--muted);
+  display: grid;
+  font-size: 0.8rem;
+  gap: 0.25rem;
+  justify-items: end;
+}
+
+.language-select option {
+  background: var(--background);
+  color: var(--foreground);
+}

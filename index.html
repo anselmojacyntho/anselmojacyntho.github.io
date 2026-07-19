@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio pessoal de Anselmo Barbosa, Senior Backend Engineer especializado em Laravel, PHP, arquitetura de sistemas, APIs e integracoes com IA.">
+    <title>Anselmo Barbosa | Senior Backend Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero" aria-labelledby="profile-name">
+        <div class="topbar">
+          <p class="prompt">anselmo@portfolio:~$ whoami</p>
+
+          <label class="language-select-label">
+            <span data-i18n="languageTitle">Idioma</span>
+            <select class="language-select" data-language-select aria-label="Language selection">
+              <option value="pt">Português</option>
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+          </label>
+        </div>
+
+        <h1 id="profile-name">Anselmo Barbosa</h1>
+        <p class="role">Senior Backend Engineer | Laravel &bull; PHP &bull; System Architecture &bull; API Design &bull; AI Integrations</p>
+        <p class="location" data-i18n="location">Santiago, Chile</p>
+
+        <nav class="profile-links" aria-label="Profile links">
+          <a href="https://github.com/anselmojacyntho" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/anselmo-barbosa" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:anselmojacyntho@gmail.com">Email</a>
+          <a class="download-button" href="assets/resume-pt.md" download data-download data-i18n="downloadResume">Baixar curriculo</a>
+        </nav>
+      </header>
+
+      <section class="terminal-section" aria-labelledby="summary-title">
+        <p class="prompt">anselmo@portfolio:~$ cat summary.md</p>
+        <h2 id="summary-title" data-i18n="summaryTitle">Resumo profissional</h2>
+        <div class="content-block" data-summary></div>
+      </section>
+
+      <section class="terminal-section" aria-labelledby="skills-title">
+        <p class="prompt">anselmo@portfolio:~$ ls skills/</p>
+        <h2 id="skills-title" data-i18n="skillsTitle">Skills principais</h2>
+        <div class="skills-grid" data-skills></div>
+      </section>
+
+      <section class="terminal-section" aria-labelledby="posts-title">
+        <p class="prompt">anselmo@portfolio:~$ curl dev.to/api/articles</p>
+        <h2 id="posts-title" data-i18n="postsTitle">Publicações</h2>
+        <div class="posts-status" data-posts-status data-i18n="postsLoading">Carregando publicações...</div>
+        <div class="posts-list" data-posts></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
